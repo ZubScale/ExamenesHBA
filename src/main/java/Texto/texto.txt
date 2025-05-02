@@ -40,6 +40,7 @@ Requisitos:
 ● Demuestra cómo se pueden hacer copias de un paquete y usarlas para
 generar nuevas órdenes de envío.
 
+YA
 
 Parte 4: Integración y Pruebas (2.5 puntos)
 Crea una clase Main con un método main() donde:
@@ -47,3 +48,5 @@ Crea una clase Main con un método main() donde:
 ● Se construye una orden de envío usando el builder.
 ● Se clona un paquete y se crean nuevas órdenes de envío basadas en la copia.
 ● Se imprimen los detalles de las órdenes para verificar el funcionamiento del sistema
+
+YA

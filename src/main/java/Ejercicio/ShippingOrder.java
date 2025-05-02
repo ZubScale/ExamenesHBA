@@ -24,7 +24,7 @@ class ShippingOrder {
                 "Direccion Envio: " + direccionEnvio + "\n" +
                 "Nombre Destinatario: " + nombreDestinatario + "\n" +
                 "Seguro Adicional: " + (seguroAdicional ? "Sí" : "No") + "\n" +
-                "Envio Exprés: " + (envioExpreas ? "Sí" : "No");
+                "Envio Exprés: " + (envioExpreas ? "Sí" : "No") + "\n";
     }
 
     public static class ShippingOrderConstructor {
