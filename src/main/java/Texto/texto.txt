@@ -1,52 +1,51 @@
-Estás desarrollando un sistema para una empresa de envíos llamada "QuickShip". Esta
-empresa maneja diferentes tipos de paquetes, y cada tipo de paquete tiene características
-particulares. También necesita construir órdenes de envío y generar copias de paquetes
-existentes (por ejemplo, para hacer envíos múltiples del mismo tipo).
-Parte 1: Patrón Factory (2.5 puntos)
-Implementa una fábrica de paquetes que pueda crear instancias de diferentes tipos de
-paquetes:
-● SmallPackage
-● MediumPackage
-● LargePackage
-Todos deben heredar de una clase abstracta o interfaz común Package. Cada tipo de
-paquete tiene un peso y un costo base diferente.
-Requisitos:
-● Implementa una clase PackageFactory que crea objetos según el tipo
-solicitado.
-● Usa un enumerado o cadena para identificar el tipo de paquete.
+1. Modelado básico de clases (15 puntos)
+Crea las siguientes clases:
+● Pelicula: contiene título, año, género y calificación.
+● Usuario: tiene nombre, tipo de usuario, lista de películas vistas.
+● CatalogoPeliculas: mantiene una lista de todas las películas disponibles.
 
 YA
 
-Parte 2: Patrón Builder (2.5 puntos)
-Desarrolla una clase ShippingOrder, que representa una orden de envío. Esta puede incluir:
-● Un paquete (instancia de Package)
-● Dirección de envío
-● Nombre del destinatario
-● Seguro adicional
-● Envío exprés
-
-Requisitos:
-● Usa el patrón Builder para construir objetos ShippingOrder.
-● La clase ShippingOrderBuilder debe permitir agregar propiedades
-opcionales de forma encadenada.
+2. Herencia y polimorfismo (10 puntos)
+Crea la jerarquía:
+● Usuario (clase base)
+● UsuarioEstandar y UsuarioPremium (subclases)
+Cada subclase debe sobrescribir un método verContenido() que indique cuántas películas
+puede ver según el tipo de usuario.
 
 YA
 
-Parte 3: Clonación (2.5 puntos)
-Agrega la capacidad de clonar un paquete existente para repetir el mismo envío a
-distintas direcciones.
-Requisitos:
-● Implementa el método clone() en las clases de paquetes.
-● Demuestra cómo se pueden hacer copias de un paquete y usarlas para
-generar nuevas órdenes de envío.
+Patrón Builder (20 puntos)
+Implementa el patrón Builder para crear objetos Usuario de manera flexible.
+Debe permitir construir objetos con campos como:
+● Nombre
+● Edad
+● Preferencia de género
+● Lista inicial de películas vistas
+Construye instancias de UsuarioEstandar o UsuarioPremium.
 
 YA
 
-Parte 4: Integración y Pruebas (2.5 puntos)
-Crea una clase Main con un método main() donde:
-● Se cree al menos un paquete de cada tipo usando la fábrica.
-● Se construye una orden de envío usando el builder.
-● Se clona un paquete y se crean nuevas órdenes de envío basadas en la copia.
-● Se imprimen los detalles de las órdenes para verificar el funcionamiento del sistema
+4. Patrón Singleton (10 puntos)
+Implementa CatalogoPeliculas como un Singleton. Debe:
+● Gestionar una lista de películas disponibles.
+YA
+
+
+5. Patrón Factory (10 puntos)
+Crea una clase UsuarioFactory con el método:
+● Usuario crearUsuario(String tipo, String nombre)
+YA
+
+
+6. Integración del sistema (35 puntos)
+En una clase Main, realiza lo siguiente:
+● Crea al menos 5 películas y agrégalas al catálogo.
+● Crea al menos 2 usuarios utilizando el Builder y la Factory.
+● Muestra cómo se construyen los usuarios con distintos datos.
+● Cada usuario debe ver contenido usando verContenido().
+● Agrega películas vistas a cada usuario y muestra sus listas.
+Se evaluará la correcta integración de todos los componentes, el uso adecuado de los
+patrones y la claridad del código.
 
 YA
